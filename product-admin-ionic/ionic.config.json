@@ -1,7 +1,0 @@
-{
-  "name": "product-admin-ionic",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular"
-}
