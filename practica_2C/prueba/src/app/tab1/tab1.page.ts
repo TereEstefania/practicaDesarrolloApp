@@ -10,25 +10,6 @@ import { AlertController } from '@ionic/angular';
 export class Tab1Page {
 
   constructor(
-    private alertController: AlertController
   ) {}
 
-  async mostrarConsola(){
-    const alert = await this.alertController.create({
-      header: 'Nuevo nombre',
-      inputs:[
-        {
-          type:'text',
-          name: 'newName',
-          placeholder: 'nombre'
-        }
-      ],
-      buttons: ['Guardar'],
-    });
-
-    await alert.present();
-    console.log("1 2 3 probando");
-  }
-
-  
 }
