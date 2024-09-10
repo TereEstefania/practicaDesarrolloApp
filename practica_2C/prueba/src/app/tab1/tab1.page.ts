@@ -8,8 +8,33 @@ import { AlertController } from '@ionic/angular';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
-
+  listas: any =[];
   constructor(
+    private alertController: AlertController
   ) {}
 
+  async agregar(){
+  const alert = await this.alertController.create({
+    header: 'Nuevo elemento',
+    inputs:[
+      {
+        type:'text',
+        name: 'newList',
+        placeholder: 'elemento'
+      }
+    ],
+    buttons: [
+      {
+        text: 'Guardar',
+        handler: (data) => {
+            this.listas.push(data.newList);
+            console.log(this.listas);
+        }
+      }
+    ],
+  });
+
+   await alert.present();
+   
+  }
 }

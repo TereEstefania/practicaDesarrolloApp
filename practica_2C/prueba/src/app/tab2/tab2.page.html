@@ -14,16 +14,12 @@
   </ion-header>
   
 
-  <ion-fab horizontal="end" vertical="bottom" slot="fixed" (click)="mostrarConsola()" >
-    <ion-fab-button >
-      <ion-icon name="add"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
-
   <h2>Datos de servidor</h2>
     <ion-list>
       <ion-item *ngFor="let usuario of usuarios">
         <ion-label>{{usuario.id}} - {{usuario.name}}</ion-label>
       </ion-item>
     </ion-list>
+
+    <ion-button (click)="mostrarConsola()">Mostrar</ion-button>
 </ion-content>

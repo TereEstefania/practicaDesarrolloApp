@@ -14,7 +14,8 @@ export class Proveedor1Service {
    
     console.log('hola proveedor');
   }
+
   obtenerDatos(){
-  return this.httpClient.get('https://jsonplaceholder.typicode.com/users');
+   return this.httpClient.get('https://jsonplaceholder.typicode.com/users');
   }
 }
