@@ -53,7 +53,7 @@ export class Tab1Page {
       ]
     })
     await alerta.present();
-    console.log('Hola Mundo!');
+   
   }
    
 

@@ -1,5 +1,7 @@
 import { Actividad } from "./actividades.model";
-
+/**
+ * @interface Lista modelo de lista que sera exportado al servicio
+ */
 export class Lista {
     [x: string]: any;
     id: number;

@@ -34,7 +34,10 @@ export class AgregarPage implements OnInit {
 
   ngOnInit() {
   }
-
+/**
+ * @function agregar funcion que agrega una nueva actividad a la lista
+ * @returns 
+ */
   agregar(){
     if(this.nombreItem.length === 0) {
       return
@@ -46,6 +49,10 @@ export class AgregarPage implements OnInit {
     this.nombreItem = '';
      
   }
+
+  /***
+   * @function EditarActividad funcion que permite editar una actividad
+   */
 
 async EditarActividad(actividad: Actividad) {
       let alerta = await this.listaService.alertController.create({
@@ -82,17 +89,29 @@ async EditarActividad(actividad: Actividad) {
     console.log('Editar', actividad)
    }
 
+   /**
+    * @function editar llama a la funcion EditarActividad para editar una actividad
+    * @param actividad 
+    */
    editar(actividad: Actividad){
 
     this.EditarActividad(actividad);
 
    }
+
+   /**
+    * 
+    * @param actividad 
+    */
     eliminar(actividad: Actividad) {
       this.lista.item = this.lista.item.filter((item)=> item !== actividad);
       this.listaService.guardarStorage();
     console.log('Eliminar', actividad)
   }
 
+  /**
+   * @function cambioCkeck funcion que controla los cambios en el checkboxs de las actividades
+   */
   cambioCkeck() {
     const pendientes = this.lista.item.filter((item)=> item.completado == false).length;
     if(pendientes == 0) {

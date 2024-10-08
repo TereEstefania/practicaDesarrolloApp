@@ -7,6 +7,12 @@ import { Lista } from '../models/lista.model';
 })
 export class FiltroListaPipe implements PipeTransform {
 
+  /**
+   * @function transform esta funcion clasifica las listas dependiendo el estado de las actividades
+   * @param listas recibe un argumento de tipo lista
+   * @param tipo recibe un argumeto de tipo string que contendra el estado de la lista
+   * @returns 
+   */
   transform(listas: Lista[], tipo: string){
     let lista:any[] = [];
     switch(tipo) {
